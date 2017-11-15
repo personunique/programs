@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<style>
+			*{
+				font-family:Segoe UI;
+				font-size:20px;
+			}
+			h2{
+				text-align="center";
+			}
+			table{
+					border:5px solid red;
+			}
+		</style>
+		<script>
+			function Addition(a,b)
+			{
+				var res=parseFloat(a.value)+parseFloat(b.value);
+				//alert('Addition is '+res);
+				//document.forms[0].txtAN.value=res;
+				document.getElementById("lblRes").innerHTML="<i>Addition is "+res+"</i>";
+				
+			}
+	
+			function Subtraction(a,b)
+			{
+				var res=parseFloat(a.value)-parseFloat(b.value);
+				//alert('Subtraction is '+res);
+				document.forms[0].txtAN.value=res;
+			}
+			
+			function checkmax(a,b)
+			{
+				if (parseFloat(a.value)==parseFloat(b.value))
+				{
+				alert("both are equal")
+				}
+				else if (parseFloat(a.value)>parseFloat(b.value))
+				{
+				alert("number a is greater")
+				}
+				else
+				{alert("number " +b.value+ " greater" )
+				}
+				
+			}
+			
+			function checkVowel(ch)
+			{
+				if(isNaN(ch.value))
+				{
+					switch((ch.value).toLowerCase())
+					{
+					case "a":
+					case "e":
+					case "i":
+					case "o":
+					case "u":
+						alert("It is vowel");
+						break;
+						default:
+						alert("It is consonant");
+					}
+				}
+				else
+				alert("plz enter character");
+			}
+			
+			
+			function getFactorial(b)
+			{
+			fact=1;
+			
+			for( var i=1;i<=parseFloat(b.value);i++)
+			{
+			fact*=i;
+			}
+			//alert('factorial is'+fact);
+			document.forms[0].txtAN.value=fact;
+			}
+			
+			
+			function myConcat(separator)
+			{
+			result=""
+			for(var index=1;index<arguments.length;index++)
+			{
+			result +=arguments[index]+separator
+			}
+			return result
+			}
+				
+			console.log(myConcat(",","red","orange","blue"))
+			console.log(parseInt("120.50"));
+			console.log(parseInt("120A.50"));
+			console.log(parseFloat("A120.50"));
+			console.log(parseFloat("1b20.50"));
+			console.log(parseFloat("120.50"));
+			
+			today=new Date(6959505);
+			now=String(today)
+			console.log(today);
+			
+		</script>
+		
+	</head>
+	<body>
+		<h2 align="center">Calculator</h2>
+		<!--  <form method="post" 
+		action="mydetails.html">-->
+		<form>
+		<table align="center" cellpadding="5">
+		
+		<tr>
+			<th>First Number : </td>
+			<td>
+				<input type="text" name="txtFN"
+				id="txtFN" placeholder="Number 1"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Second Number : </td>
+			<td>
+				<input type="text" name="txtSN"
+				id="txtSN" placeholder="Number 2"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Answer:</td>
+			<td>
+				<input type="text" name="txtAN"
+				id="txtAN" placeholder="Your answer"
+				readonly />
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<!-- <input type="submit" 
+			value="Add"/> -->
+			<!-- INLINE JAVA 
+			
+			<input type="button" value="Add"
+			onclick="alert('HelloWorld')"/> -->
+		
+			<input type="button" value="Add"
+			onclick="Addition(txtFN,txtSN)"/>
+			
+			<input type="button" value="Subtraction"
+			onclick="Subtraction(txtFN,txtSN)"/>
+			
+			<input type="button" value="check max"
+			onclick="checkmax(txtFN,txtSN)"/>
+			
+			<input type="button" value="check vowel"
+			onclick="checkVowel(txtFN)"/>
+			
+			<input type="button" value="factorial"
+			onclick="getFactorial(txtSN)"/>
+			
+			</td>
+	
+			<td>
+				<input type="reset" value="clear"/>
+			</td>
+		</tr>
+		
+		</table>
+		
+		<p id="lblRes">
+		</p>
+		</form>
+	</body>
+</html>

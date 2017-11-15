@@ -1,0 +1,38 @@
+<EmployeeInfo>     <!--Root Elememnt-->
+
+<Employee id="101"> <!--Child Element-->
+	<!--Grand Child element-->
+	<Name>Rahul</Name>
+	<Desig>Tester</Desig>
+	<Salary>25.00</Salary>
+	<Gender>Male</Gender>
+	<Deptname>Maths</Deptname>
+</Employee>
+
+<Employee id='102'> <!--Child Element-->
+	<!--Grand Child element-->
+	<Name>Raju</Name>
+	<Desig>Programmer</Desig>
+	<Salary>50000</Salary>
+	<Gender>Male</Gender>
+	<Deptname>Physics</Deptname>
+</Employee>
+
+<Employee id='103'> <!--Child Element-->
+	<!--Grand Child element-->
+	<Name>Pratik</Name>
+	<Desig>Designer</Desig>
+	<Salary>28000</Salary>
+	<Gender>Male</Gender>
+	<Deptname>Chemistry</Deptname>
+</Employee>
+
+<Employee id='110'> <!--Child Element-->
+	<!--Grand Child element-->
+	<Name>Pooja</Name>
+	<Desig>Designer</Desig>
+	<Salary>90000</Salary>
+<Gender>Female</Gender>
+	<Deptname>Biology</Deptname>
+</Employee>
+</EmployeeInfo>

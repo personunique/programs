@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Interest</title>
+		<style>
+			*{
+				font-family:Segoe UI;
+				font-size:20px;
+			}
+			h2,h1{
+				background-color:purple;
+				text-align:center;
+				color:white;
+			}
+			table{
+					border:5px solid red;
+			}
+		</style>
+		<script src="../scripts/SI.js"></script>
+		
+	</head>
+	<body>
+	
+		<h2 align="center">Calculator</h2>
+		
+		<form>
+		<table align="center" cellpadding="5">
+		
+		<tr>
+			<th> Principal </td>
+			<td>
+				<input type="Number" name="txtP"
+				id="txtP" placeholder="Principal amount"
+				required/>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Number of period</td>
+			<td>
+				<input type="Number" name="txtN"
+				id="txtN" placeholder="number of period"
+				required/>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>Rate of interest</td>
+			<td>
+				<input type="Number" name="txtR" 
+				id="txtR" placeholder="Rate of interest"
+				required/>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+		
+			<!-- <input type="button" value="simple interest" -->
+			<!-- onclick="interest(P,N,R)"/> -->
+			
+			<input type="submit" value="Interest" 
+			onclick="interest(this.form)"/>
+			
+			</td>
+	
+			<td>
+				<input type="reset" value="clear"/>
+			</td>
+		</tr>
+		
+		</table>
+		<hr/>
+		<h1 id="res"></h1>
+		</form>
+	</body>
+</html>
+

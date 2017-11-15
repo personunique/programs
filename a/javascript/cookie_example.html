@@ -1,0 +1,42 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>Cookie example..</title>
+<script>
+	function setCookie(user)
+	{
+	var d= new Date();
+	d.setTiem(d.getTime()+(30*24*60*60*1000));
+	var expires="expires=" +d.toGMTString();
+	sessionStorage.username=user.value;
+	document.cookie="username" +user.value+ "; "+expires;
+	alert('cookie is stored in browser');
+	}
+	function DeleteCookie(name){
+	document.cookie=name+'=;expires=Thu,25 Feb 2016 11:12:01 GMT;';
+ alert('cookie is deleted from my browser');
+ }
+ function showColor(){
+ alert(this.color);
+ }
+ var oCar1=new Object;
+ oCar1.color="red";
+ 
+ oCar1.showColorolor=showColor;
+ var oCar2=new Object;
+ ocar2.color="blue";
+ oCar2.showColorolor=showColor;
+ oCar1.showColor();//outputs "red"
+ oCar2.showColor();//outputs "red"
+ 
+ ;
+ </script>
+ </head>
+ <body>
+	<input type="text" name="txtusername" id="txtusername" placeholder="User name "/>
+	<input type="button" value="StoreCookie" onclick="setCookie(txtusername)"/>
+	<input type="button" value="DeleteCookie" onclick="deleteCookie(username)"/>
+	<a href="mydetails.html">MyDetails page</a>
+</body>
+</html>
+	
